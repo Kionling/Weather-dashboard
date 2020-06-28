@@ -8,17 +8,131 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Weather Dashboard</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+<div class="wrapper">
+    <nav class="navbar navbar-dark justify-content-center bg-dark">
+      <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+    </nav>
+    <br>
+<div class="row">
+  <div class="col-2">
+    <form class="form-inline ml-2">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+      <div class="list-group mt-3 ml-2" id="searchHistory">
+      <button type="button" class="list-group-item list-group-item-action">Atlanta</button>
+      <button type="button" class="list-group-item list-group-item-action">San Francisco</button>
+      <button type="button" class="list-group-item list-group-item-action">New York</button>
+      <button type="button" class="list-group-item list-group-item-action">San Jose</button> 
+      </div>
+  </div>
+  <div>
+          <div class="row">
+            <div class="col-12">
+      <div class="card mb-5">
+        <div class="card-body">
+          <h1><span></span>(<span></span>)</h1>
+          <p>Temp: <span></span></p>
+          <p>Wind Speed: <span></span></p>
+          <p>Humidity: <span></span></p>
+          <p>UV index: <span></span></p>
+        </div>
+      </div>
+          </div>
+          </div>
+
+      <div class="row">
+        
+      <div class="card text-white bg-primary mx-3 mb-3 " style="width: 13rem;">
+        <div class="card-body">
+          <h5 class="card-title" id="dayOne" >Date</h5>
+          <img src="">
+          <br>
+          <p class="card-text">Temp: </p>
+          <p class="card-text">Humidity: </p>
+        </div>
+      </div>
+
+      <div class="card text-white bg-primary mx-3 mb-3" style="width: 13rem;">
+        <div class="card-body">
+          <h5 class="card-title" id="dayOne" >Date</h5>
+          <img src="">
+          <br>
+          <p class="card-text">Temp: </p>
+          <p class="card-text">Humidity: </p>
+        </div>
+      </div>
+
+      <div class="card text-white bg-primary mx-3 mb-3" style="width: 13rem;">
+        <div class="card-body">
+          <h5 class="card-title" id="dayOne" >Date</h5>
+          <img src="">
+          <br>
+          <p class="card-text">Temp: </p>
+          <p class="card-text">Humidity: </p>
+        </div>
+      </div>
+
+      <div class="card text-white bg-primary  mx-3 mb-3" style="width: 13rem;">
+        <div class="card-body">
+          <h5 class="card-title" id="dayOne" >Date</h5>
+          <img src="">
+          <br>
+          <p class="card-text">Temp: </p>
+          <p class="card-text">Humidity: </p>
+        </div>
+      </div>
+
+
+      <div class="card text-white bg-primary mx-3 mb-3" style="width: 13rem;">
+        <div class="card-body">
+          <h5 class="card-title" id="dayOne" >Date</h5>
+          <img src="">
+          <br>
+          <p class="card-text">Temp: </p>
+          <p class="card-text">Humidity: </p>
+        </div>
+      </div>
+
+
+
+      </div>
+  </div>
+
+      
+
+</div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+    
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
