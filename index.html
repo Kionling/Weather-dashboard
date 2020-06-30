@@ -17,16 +17,17 @@
     </nav>
     <br>
 <div class="row">
-  <div class="col-2">
+  <div class="col-3">
     <form class="form-inline ml-2">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" id="searchInput" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" id="searchStart" type="submit">Search</button>
     </form>
       <div class="list-group mt-3 ml-2" id="searchHistory">
-      <button type="button" class="list-group-item list-group-item-action">Atlanta</button>
-      <button type="button" class="list-group-item list-group-item-action">San Francisco</button>
-      <button type="button" class="list-group-item list-group-item-action">New York</button>
-      <button type="button" class="list-group-item list-group-item-action">San Jose</button> 
+        <button class="list-group-item"></button>
+        <button class="list-group-item"></button>
+        <button class="list-group-item"></button>
+        <button class="list-group-item"></button>
+
       </div>
   </div>
   <div>
@@ -34,11 +35,11 @@
             <div class="col-12">
       <div class="card mb-5">
         <div class="card-body">
-          <h1><span></span>(<span></span>)</h1>
-          <p>Temp: <span></span></p>
-          <p>Wind Speed: <span></span></p>
-          <p>Humidity: <span></span></p>
-          <p>UV index: <span></span></p>
+          <h1><span id="mainCity"></span>(<span id="mainDate"></span>)</h1>
+          <p>Temp: <span id="mainTemp"></span> °F</p>
+          <p>Wind Speed: <span id="mainWind"></span> MPH</p>
+          <p>Humidity: <span id="mainHumidity"></span>%</p>
+          <p>UV index: <button type="button" class="btn ">Primary</button></p>
         </div>
       </div>
           </div>
@@ -48,52 +49,52 @@
         
       <div class="card text-white bg-primary mx-3 mb-3 " style="width: 13rem;">
         <div class="card-body">
-          <h5 class="card-title" id="dayOne" >Date</h5>
+          <h5 class="card-title" id="dayOneDate"></h5>
           <img src="">
           <br>
-          <p class="card-text">Temp: </p>
-          <p class="card-text">Humidity: </p>
+          <p class="card-text">Temp: <span id="dayOneTemp"></span></p>
+          <p class="card-text">Humidity: <span id="dayOneHumidity"></span></p>
         </div>
       </div>
 
       <div class="card text-white bg-primary mx-3 mb-3" style="width: 13rem;">
         <div class="card-body">
-          <h5 class="card-title" id="dayOne" >Date</h5>
+          <h5 class="card-title" id="dayTwoDate" ></h5>
           <img src="">
           <br>
-          <p class="card-text">Temp: </p>
-          <p class="card-text">Humidity: </p>
+          <p class="card-text">Temp: <span id="dayTwoTemps"</p>
+          <p class="card-text">Humidity: <span id="dayTwoHumidity"</p>
         </div>
       </div>
 
       <div class="card text-white bg-primary mx-3 mb-3" style="width: 13rem;">
         <div class="card-body">
-          <h5 class="card-title" id="dayOne" >Date</h5>
+          <h5 class="card-title" id="dayThreeDate" ></h5>
           <img src="">
           <br>
-          <p class="card-text">Temp: </p>
-          <p class="card-text">Humidity: </p>
+          <p class="card-text">Temp: <span id="dayThreeTemp"</p>
+          <p class="card-text">Humidity: <span id="dayThreeHumidity"</p>
         </div>
       </div>
 
       <div class="card text-white bg-primary  mx-3 mb-3" style="width: 13rem;">
         <div class="card-body">
-          <h5 class="card-title" id="dayOne" >Date</h5>
+          <h5 class="card-title" id="dayFourDate" ></h5>
           <img src="">
           <br>
-          <p class="card-text">Temp: </p>
-          <p class="card-text">Humidity: </p>
+          <p class="card-text">Temp: <span id="dayFourTemp"></span></p>
+          <p class="card-text">Humidity: <span id="dayFourHumidity"></span></p>
         </div>
       </div>
 
 
       <div class="card text-white bg-primary mx-3 mb-3" style="width: 13rem;">
         <div class="card-body">
-          <h5 class="card-title" id="dayOne" >Date</h5>
+          <h5 class="card-title" id="dayFiveDate" ></h5>
           <img src="">
           <br>
-          <p class="card-text">Temp: </p>
-          <p class="card-text">Humidity: </p>
+          <p class="card-text">Temp: <span id="dayFiveTemp"></span></p>
+          <p class="card-text">Humidity: <span id="dayFiveHumidity"></span> </p>
         </div>
       </div>
 
@@ -134,5 +135,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
 </html>
