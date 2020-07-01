@@ -27,7 +27,7 @@ $.ajax({
     var mainCities = $("#mainCity").text(response.name);
     var mainWinds = $("#mainWind").text(response.wind.speed);
     var mainHumidity = $("#mainHumidity").text(response.main.humidity);
-    var mainCondi = $("#mainConditions").attr("src", "https://api.openweathermap.org/img/wn/"+ response.weather[0].icon +"@2x.png")
+    var mainCondi = $("#mainConditions").attr("src", "http://api.openweathermap.org/img/wn/"+ response.weather[0].icon +"@2x.png")
 
     // console.log(response.weather[0].icon)
 
