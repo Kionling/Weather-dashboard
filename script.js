@@ -14,7 +14,7 @@ var date = new Date()
 
 function displayWeatherInfo(city){
 
-var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=a849ce81cd857db4bbacc8466ea673d4&units=Imperial"
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=a849ce81cd857db4bbacc8466ea673d4&units=Imperial"
 
 $.ajax({
     url: queryURL,
@@ -27,7 +27,7 @@ $.ajax({
     var mainCities = $("#mainCity").text(response.name);
     var mainWinds = $("#mainWind").text(response.wind.speed);
     var mainHumidity = $("#mainHumidity").text(response.main.humidity);
-    var mainCondi = $("#mainConditions").attr("src", "https://openweathermap.org/img/wn/"+ response.weather[0].icon +"@2x.png")
+    var mainCondi = $("#mainConditions").attr("src", "https://api.openweathermap.org/img/wn/"+ response.weather[0].icon +"@2x.png")
 
     // console.log(response.weather[0].icon)
 
@@ -81,11 +81,11 @@ $.ajax({
 
 
 
-    var weatherIconOne = $("#dayOneCond").attr("src", "http://openweathermap.org/img/wn/"+ response.list[6].weather[0].icon +"@2x.png");
-    var weatherIconTwo = $("#dayTwoCond").attr("src", "http://openweathermap.org/img/wn/"+ response.list[14].weather[0  ].icon +"@2x.png");
-    var weatherIconThree = $("#dayThreeCond").attr("src", "http://openweathermap.org/img/wn/"+ response.list[15].weather[0].icon +"@2x.png")
-    var weatherIconFour = $("#dayFourCond").attr("src", "http://openweathermap.org/img/wn/"+ response.list[30].weather[0].icon +"@2x.png");
-    var weatherIconFive = $("#dayFiveCond").attr("src", "http://openweathermap.org/img/wn/"+ response.list[37].weather[0].icon +"@2x.png")
+    var weatherIconOne = $("#dayOneCond").attr("src", "https://openweathermap.org/img/wn/"+ response.list[6].weather[0].icon +"@2x.png");
+    var weatherIconTwo = $("#dayTwoCond").attr("src", "https://openweathermap.org/img/wn/"+ response.list[14].weather[0  ].icon +"@2x.png");
+    var weatherIconThree = $("#dayThreeCond").attr("src", "https://openweathermap.org/img/wn/"+ response.list[15].weather[0].icon +"@2x.png")
+    var weatherIconFour = $("#dayFourCond").attr("src", "https://openweathermap.org/img/wn/"+ response.list[30].weather[0].icon +"@2x.png");
+    var weatherIconFive = $("#dayFiveCond").attr("src", "https://openweathermap.org/img/wn/"+ response.list[37].weather[0].icon +"@2x.png")
 
         var indexDay = 0;
 
