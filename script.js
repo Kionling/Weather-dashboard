@@ -27,6 +27,9 @@ $.ajax({
     var mainCities = $("#mainCity").text(response.name);
     var mainWinds = $("#mainWind").text(response.wind.speed);
     var mainHumidity = $("#mainHumidity").text(response.main.humidity);
+    var mainCondi = $("#mainConditions").attr("src", "https://openweathermap.org/img/wn/"+ response.weather[0].icon +"@2x.png")
+
+    // console.log(response.weather[0].icon)
 
     // $("#searchHistory").empty();
     // var myButton = $("<button>");
@@ -46,7 +49,6 @@ $("#searchStart").on("click", function(event){
 
     displayWeatherInfo(cityInput);
     displayForecastInfo(cityInput);
-    // displayUvIndex(cityInput);
 
 
 
@@ -60,6 +62,8 @@ $.ajax({
     method: "GET"
 }).then(function(response) {
     var forecastInfo = response;
+    
+
 
     var forecastDayOne = $("#dayOneTemp").text(response.list[6].main.temp);
     var forecastDayTwo = $("#dayTwoTemp").text(response.list[14].main.temp);
@@ -121,26 +125,7 @@ $.ajax({
 }
 
 
-function displayUvIndex(city) {
-    var queryURL = "https://api.openweathermap.org/data/2.5/uvi?q=" + city +"&appid=a849ce81cd857db4bbacc8466ea673d4";
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-}).then(function(response){
-    var UVinfo = response;
-    console.log(response);
-})
-
-
-
-
-
-
-
-
-}
- 
 
 
 })
