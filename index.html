@@ -1,117 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
 
     <title>Weather Dashboard</title>
   </head>
   <body>
-<div class="wrapper">
-    <nav class="navbar navbar-dark justify-content-center bg-dark">
-      <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
-    </nav>
-    <br>
-<div class="row">
-  <div class="col-3">
-    <form class="form-inline ml-2">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" id="searchInput" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" id="searchStart" type="submit">Search</button>
-    </form>
-      <div class="list-group mt-3 ml-2" id="searchHistory">
-     
-      </div>
-  </div>
-  <div>
+    <div class="wrapper">
+      <nav class="navbar navbar-dark justify-content-center bg-dark">
+        <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+      </nav>
+      <br />
+      <div class="row">
+        <div class="col-3">
+          <form class="form-inline ml-2">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              id="searchInput"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-success my-2 my-sm-0"
+              id="searchStart"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+          <div class="list-group mt-3 ml-2" id="searchHistory"></div>
+        </div>
+        <div>
           <div class="row">
             <div class="col-12">
-      <div class="card mb-5">
-        <div class="card-body">
-          <h1><span id="mainCity"></span> | Today is: (<span id="mainDate"></span>)</h1>
-          <p>Temp: <span id="mainTemp"></span> °F</p>
-          <p>Wind Speed: <span id="mainWind"></span> MPH</p>
-          <p>Humidity: <span id="mainHumidity"></span>%</p>
-          <p>Conditions:</p>
-          <img id="mainConditions"src="">
-        </div>
-      </div>
+              <div class="card mb-5">
+                <div class="card-body">
+                  <h1>
+                    <span id="mainCity"></span> | Today is: (<span
+                      id="mainDate"
+                    ></span
+                    >)
+                  </h1>
+                  <p>Temp: <span id="mainTemp"></span> °F</p>
+                  <p>Wind Speed: <span id="mainWind"></span> MPH</p>
+                  <p>Humidity: <span id="mainHumidity"></span>%</p>
+                  <p>Conditions:</p>
+                  <img id="mainConditions" src="" />
+                </div>
+              </div>
+            </div>
           </div>
+          <h1>5 Day Forecast:</h1>
+          <div class="row">
+            <div
+              class="card text-white bg-primary mx-3 mb-3"
+              style="width: 13rem"
+            >
+              <div class="card-body">
+                <h5 class="card-title" id="dayOneDate"></h5>
+                <img id="dayOneCond" src="" />
+                <br />
+                <p class="card-text">Temp: <span id="dayOneTemp"></span>°F</p>
+                <p class="card-text">
+                  Humidity: <span id="dayOneHumidity"></span>%
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="card text-white bg-primary mx-3 mb-3"
+              style="width: 13rem"
+            >
+              <div class="card-body">
+                <h5 class="card-title" id="dayTwoDate"></h5>
+                <img id="dayTwoCond" src="" />
+                <br />
+                <p class="card-text">Temp: <span id="dayTwoTemp"></span>°F</p>
+                <p class="card-text">
+                  Humidity: <span id="dayTwoHumidity"></span>%
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="card text-white bg-primary mx-3 mb-3"
+              style="width: 13rem"
+            >
+              <div class="card-body">
+                <h5 class="card-title" id="dayThreeDate"></h5>
+                <img id="dayThreeCond" src="" />
+                <br />
+                <p class="card-text">Temp: <span id="dayThreeTemp"></span>°F</p>
+                <p class="card-text">
+                  Humidity: <span id="dayThreeHumidity"></span>%
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="card text-white bg-primary mx-3 mb-3"
+              style="width: 13rem"
+            >
+              <div class="card-body">
+                <h5 class="card-title" id="dayFourDate"></h5>
+                <img id="dayFourCond" src="" />
+                <br />
+                <p class="card-text">Temp: <span id="dayFourTemp"></span>°F</p>
+                <p class="card-text">
+                  Humidity: <span id="dayFourHumidity"></span>%
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="card text-white bg-primary mx-3 mb-3"
+              style="width: 13rem"
+            >
+              <div class="card-body">
+                <h5 class="card-title" id="dayFiveDate"></h5>
+                <img id="dayFiveCond" src="" />
+                <br />
+                <p class="card-text">Temp: <span id="dayFiveTemp"></span>°F</p>
+                <p class="card-text">
+                  Humidity: <span id="dayFiveHumidity"></span>%
+                </p>
+              </div>
+            </div>
           </div>
-<h1>5 Day Forecast:</h1>
-      <div class="row">
-    
-      <div class="card text-white bg-primary mx-3 mb-3 " style="width: 13rem;">
-        <div class="card-body">
-          <h5 class="card-title" id="dayOneDate"></h5>
-          <img id="dayOneCond" src="">
-          <br>
-          <p class="card-text">Temp: <span id="dayOneTemp"></span>°F</p>
-          <p class="card-text">Humidity: <span id="dayOneHumidity"></span>%</p>
         </div>
       </div>
+    </div>
 
-      <div class="card text-white bg-primary mx-3 mb-3" style="width: 13rem;">
-        <div class="card-body">
-          <h5 class="card-title" id="dayTwoDate" ></h5>
-          <img id="dayTwoCond"src="">
-          <br>
-          <p class="card-text">Temp: <span id="dayTwoTemp"></span>°F</p>
-          <p class="card-text">Humidity: <span id="dayTwoHumidity"></span>%</p>
-        </div>
-      </div>
-
-      <div class="card text-white bg-primary mx-3 mb-3" style="width: 13rem;">
-        <div class="card-body">
-          <h5 class="card-title" id="dayThreeDate" ></h5>
-          <img id="dayThreeCond" src="">
-          <br>
-          <p class="card-text">Temp: <span id="dayThreeTemp"></span>°F</p>
-          <p class="card-text">Humidity: <span id="dayThreeHumidity"></span>%</p>
-        </div>
-      </div>
-
-      <div class="card text-white bg-primary  mx-3 mb-3" style="width: 13rem;">
-        <div class="card-body">
-          <h5 class="card-title" id="dayFourDate" ></h5>
-          <img id="dayFourCond" src="">
-          <br>
-          <p class="card-text">Temp: <span id="dayFourTemp"></span>°F</p>
-          <p class="card-text">Humidity: <span id="dayFourHumidity"></span>%</p>
-        </div>
-      </div>
-
-
-      <div class="card text-white bg-primary mx-3 mb-3" style="width: 13rem;">
-        <div class="card-body">
-          <h5 class="card-title" id="dayFiveDate" ></h5>
-          <img id="dayFiveCond" src="">
-          <br>
-          <p class="card-text">Temp: <span id="dayFiveTemp"></span>°F</p>
-          <p class="card-text">Humidity: <span id="dayFiveHumidity"></span>%</p>
-        </div>
-      </div>
-
-
-
-      </div>
-  </div>
-
-      
-
-</div>
-  </div>
-    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
   </body>
 </html>
