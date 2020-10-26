@@ -24,8 +24,6 @@ $(document).ready(function () {
       method: "GET",
     }).then(function (response) {
       var weatherInfo = response;
-      // console.log(weatherInfo)
-
       var mainTempera = $("#mainTemp").text(response.main.temp);
       var mainCities = $("#mainCity").text(response.name);
       var mainWinds = $("#mainWind").text(response.wind.speed);
@@ -152,4 +150,7 @@ $(document).ready(function () {
       var todayDate = $("#mainDate").text(weekDays[indexDay + 1]);
     });
   }
+
+  //Adding moment functionality
+  $(`#momentTime`).text(moment().format('LL | h:mm a'));
 });
